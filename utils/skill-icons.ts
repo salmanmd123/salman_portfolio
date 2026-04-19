@@ -1,6 +1,6 @@
 import {
   SiHtml5,
-  SiCss,
+  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -27,7 +27,7 @@ export const getSkillIcon = (skill: string): IconType => {
     case "html":
       return SiHtml5;
     case "css":
-      return SiCss;
+      return SiCss3;
     case "javascript":
       return SiJavascript;
     case "js":
@@ -67,8 +67,8 @@ export const getSkillIcon = (skill: string): IconType => {
       return SiPython;
     case "c":
       return SiC;
-      default:
-    return FaCode;
+    default:
+      return FaCode;
   }
 };
 
