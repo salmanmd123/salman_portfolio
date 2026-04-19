@@ -6,7 +6,6 @@ import { SplitText } from "gsap/dist/SplitText";
 import Link from "next/link";
 import { useRef } from "react";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import Tilt from "react-parallax-tilt";
@@ -125,12 +124,13 @@ const HeroSection = () => {
             <p className="hero-heading text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
               I'm{" "}
               <span className="text-white font-bold">{personalData.name}</span>,
-              a passionate and dedicated learner who believes in doing every task with
+              a passionate and dedicated learner who believes in doing every
+              task with
               <span
                 className="text-red-500 font-bold inline-block min-w-[200px]"
                 ref={designationRef}
               >
-              {personalData.designation}
+                {personalData.designation}
               </span>
             </p>
           </div>
@@ -158,7 +158,6 @@ const HeroSection = () => {
               >
                 <BsInstagram size={24} />
               </Link>
-              
             </div>
 
             <div className="hero-cta flex flex-wrap gap-4">
@@ -254,7 +253,9 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">06</span>
                     <p className="ml-4">
                       <span className="text-slate-200">motto:</span>{" "}
-                      <span className="text-red-400">"Code. Create. Innovate. Repeat."</span>
+                      <span className="text-red-400">
+                        "Code. Create. Innovate. Repeat."
+                      </span>
                     </p>
                   </div>
                   <div className="flex gap-4">

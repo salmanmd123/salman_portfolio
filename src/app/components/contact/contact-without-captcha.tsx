@@ -1,6 +1,5 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
@@ -25,44 +24,44 @@ const ContactWithoutCaptcha = () => {
     }
   };
 
-const handleSendMail = async (e: React.MouseEvent<HTMLButtonElement>) => {
-  e.preventDefault();
+  const handleSendMail = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
 
-  if (!input.email || !input.message || !input.name) {
-    setError({ ...error, required: true });
-    return;
-  }
-
-  try {
-    setIsLoading(true);
-
-    console.log("Sending to API..."); // debug
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(input),
-    });
-
-    const data = await res.json();
-    console.log("Response:", data); // debug
-
-    if (data.success) {
-      toast.success("Message saved to DB ✅");
-      setInput({ name: "", email: "", message: "" });
-    } else {
-      toast.error("Failed to save ❌");
+    if (!input.email || !input.message || !input.name) {
+      setError({ ...error, required: true });
+      return;
     }
 
-    setIsLoading(false);
-  } catch (err) {
-    console.log("ERROR:", err);
-    toast.error("Something went wrong ❌");
-    setIsLoading(false);
-  }
-};
+    try {
+      setIsLoading(true);
+
+      console.log("Sending to API..."); // debug
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(input),
+      });
+
+      const data = await res.json();
+      console.log("Response:", data); // debug
+
+      if (data.success) {
+        toast.success("Message saved to DB ✅");
+        setInput({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to save ❌");
+      }
+
+      setIsLoading(false);
+    } catch (err) {
+      console.log("ERROR:", err);
+      toast.error("Something went wrong ❌");
+      setIsLoading(false);
+    }
+  };
   return (
     <div className="relative group p-8 lg:p-10 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl shadow-2xl">
       <div className="flex flex-col gap-8">
