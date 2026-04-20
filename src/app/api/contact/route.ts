@@ -26,9 +26,13 @@ Message: ${body.message}
     });
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(error);
-    return NextResponse.json({ success: false, error: error.message });
+
+    return NextResponse.json({
+      success: false,
+      error: error instanceof Error ? error.message : "Something went wrong",
+    });
   }
 }
 
