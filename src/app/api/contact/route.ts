@@ -1,18 +1,34 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "@/lib/mongodb";
-import Message from "@/models/Message";
+import nodemailer from "nodemailer";
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const body = await req.json();
 
-    await connectDB();
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    const newMessage = await Message.create(body);
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER, // better for delivery
+      replyTo: body.email,
+      to: process.env.EMAIL_USER,
+      subject: "New Portfolio Message",
+      text: `
+Name: ${body.name}
+Email: ${body.email}
+Message: ${body.message}
+      `,
+    });
 
-    return NextResponse.json({ success: true, data: newMessage });
+    return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ success: false, error });
+    console.error(error);
+    return NextResponse.json({ success: false, error: error.message });
   }
 }
 
