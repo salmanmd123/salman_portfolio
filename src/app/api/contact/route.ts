@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(req) {
+export async function POST(req: Request) {
   try {
     const body = await req.json();
 
@@ -14,7 +14,7 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER, // better for delivery
+      from: process.env.EMAIL_USER,
       replyTo: body.email,
       to: process.env.EMAIL_USER,
       subject: "New Portfolio Message",
@@ -26,7 +26,7 @@ Message: ${body.message}
     });
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error(error);
     return NextResponse.json({ success: false, error: error.message });
   }
