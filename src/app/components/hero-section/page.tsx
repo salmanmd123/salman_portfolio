@@ -127,7 +127,7 @@ const HeroSection = () => {
               a passionate and dedicated learner who believes in doing every
               task with
               <span
-                className="text-red-500 font-bold inline-block min-w-[200px]"
+                className="text-red-500 font-bold block min-w-[200px]"
                 ref={designationRef}
               >
                 {personalData.designation}
