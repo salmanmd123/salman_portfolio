@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -43,7 +44,8 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },  twitter: {
+  },
+  twitter: {
     card: "summary_large_image",
     title: "Mohammed Salman | Full Stack Developer",
     description: "Building modern web applications and AI automations.",
@@ -74,6 +76,7 @@ export default function RootLayout({
         </main>
         <ScrollToTopButton />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
