@@ -96,6 +96,38 @@ export const projectsData = [
   },
   {
     id: 3,
+    name: "Just Divide Game",
+    description:
+      "Just Divide is an interactive number puzzle game built using React and Vite. Players strategically place numbered tiles on a 4×4 grid and clear them by matching equal values or dividing divisible numbers. The game features drag-and-drop gameplay, touch support for mobile devices, a countdown timer, score and level progression, tile storage and trash mechanics, pause/resume functionality, and responsive landscape-oriented gameplay. The objective is to maximize the score by creating smart merges before time runs out or no valid moves remain.",
+    tools: ["React", "Vite", "JavaScript", "CSS"],
+    role: "Frontend Developer",
+    code: "",
+    demo: "https://just-divide-game-eosin.vercel.app/",
+    date: "",
+    images: [
+      "/projects/Just Divide/1.jpeg",
+      "/projects/Just Divide/2.jpeg",
+      "/projects/Just Divide/3.jpg",
+    ],
+    videos: [""],
+    highlights: [
+      "Interactive drag-and-drop gameplay with full mobile touch support.",
+      "Custom number division and merge algorithm for strategic puzzle solving.",
+      "Score, level progression, and countdown timer system.",
+      "KEEP tile storage feature for better move planning.",
+      "TRASH system with limited uses to remove unwanted tiles.",
+      "Pause, resume, restart, and game-over detection functionality.",
+      "Landscape mode optimization for an improved gaming experience.",
+    ],
+    challenges: [
+      "Implementing smooth drag-and-drop mechanics for both desktop and touch devices.",
+      "Designing recursive merge logic that handles multiple chain reactions correctly.",
+      "Managing game state efficiently across score, timer, level, and tile systems.",
+      "Ensuring responsive gameplay while enforcing landscape orientation on mobile devices.",
+    ],
+  },
+  {
+    id: 4,
     name: "Smart Key House",
     description:
       "Smart Keys House is a simple frontend web application built using only HTML, CSS, and JavaScript. It provides a clean and easy interface to manage different types of keys such as car keys, bike keys, spare keys, remote keys, and smart programming keys. Users can view and organize key details in a structured way with basic interactive features. The application is lightweight, minimal, and designed according to client requirements without any backend complexity.",
