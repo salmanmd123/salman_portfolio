@@ -100,10 +100,10 @@ export const projectsData = [
     description:
       "Just Divide is an interactive number puzzle game built using React and Vite. Players strategically place numbered tiles on a 4×4 grid and clear them by matching equal values or dividing divisible numbers. The game features drag-and-drop gameplay, touch support for mobile devices, a countdown timer, score and level progression, tile storage and trash mechanics, pause/resume functionality, and responsive landscape-oriented gameplay. The objective is to maximize the score by creating smart merges before time runs out or no valid moves remain.",
     tools: ["React", "Vite", "JavaScript", "CSS"],
-    role: "Frontend Developer",
+    role: "Game Developer ",
     code: "https://github.com/salmanmd123/Just-Divide-Game",
     demo: "https://just-divide-game-eosin.vercel.app/",
-    date: "",
+    date: "01-05-2026",
     images: [
       "/projects/Just Divide/1.jpeg",
       "/projects/Just Divide/2.jpeg",
@@ -135,7 +135,7 @@ export const projectsData = [
     role: "Frontend Developer",
     code: "",
     demo: "https://smartkeyhouse.netlify.app/",
-    date: "",
+    date: "01-06-2025",
     images: [
       "/projects/Smart Key House/1.jpeg",
       "/projects/Smart Key House/2.jpeg",
