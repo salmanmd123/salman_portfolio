@@ -17,6 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://salman-portfolio-eight.vercel.app"),
+
   title: "Mohammed Salman - Portfolio",
   description:
     "Explore the portfolio of Mohammed Salman, a Professional Full Stack Developer specializing in Next.js, AI Automation, and modern web solutions. Built for performance and user experience.",
@@ -51,15 +53,11 @@ export const metadata: Metadata = {
     description: "Building modern web applications and AI automations.",
     images: ["/Website-overview.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
   icons: {
     icon: [{ url: "/favicon.ico" }, { url: "/logo.png", type: "image/png" }],
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
