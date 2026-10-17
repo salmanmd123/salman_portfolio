@@ -1,6 +1,5 @@
 import {
   SiHtml5,
-  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -17,6 +16,7 @@ import {
   SiPython,
   SiC,
 } from "react-icons/si";
+import { FaCss3Alt } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { FaCode } from "react-icons/fa";
 
@@ -27,7 +27,7 @@ export const getSkillIcon = (skill: string): IconType => {
     case "html":
       return SiHtml5;
     case "css":
-      return SiCss3;
+      return FaCss3Alt;
     case "javascript":
       return SiJavascript;
     case "js":
