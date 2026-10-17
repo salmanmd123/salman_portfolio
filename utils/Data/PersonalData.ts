@@ -1,8 +1,8 @@
 export const personalData = {
   name: "Mohammed Salman",
-  profile: "/pic3.jpeg",
+  profile: "/profile.jpeg",
   designation: "sincerity.",
-  designationAlternateWords:[
+  designationAlternateWords: [
     "responsibility.",
     "dedication.",
     "perfection.",
@@ -30,6 +30,5 @@ export const personalData = {
   github: "https://github.com/salmanmd123",
   Instagram: "https://www.instagram.com/___mohammed.salman___/",
   linkedIn: "https://www.linkedin.com/in/mohammed-salman-b5989b297",
-  resume:
-    "#",
+  resume: "#",
 };
