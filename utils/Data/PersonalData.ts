@@ -1,6 +1,6 @@
 export const personalData = {
   name: "Mohammed Salman",
-  profile: "/profile.jpeg",
+  profile: "/Profile.jpeg",
   designation: "sincerity.",
   designationAlternateWords: [
     "responsibility.",
