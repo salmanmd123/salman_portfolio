@@ -23,7 +23,7 @@ export const personalData = {
     "determination.",
   ],
   description:
-    "I'm Mohammed Salman, a passionate student developer with a strong foundation in full-stack web development and Artificial Intelligence. I work with technologies like HTML, CSS, JavaScript, React, Next.js, Node.js, Express, Django, MongoDB, and MySQL to build scalable and user-friendly applications. I'm particularly interested in AI and Machine Learning, and I enjoy developing intelligent systems such as health analysis tools and security applications. I love solving real-world problems through code and continuously improving my skills by exploring new technologies and building impactful projects.",
+    "I’m Mohammed Salman, a Computer Science Engineering student at Deccan College of Engineering and Technology, affiliated with Osmania University. I’m passionate about technology, especially Web Development, AI, machine learning, and cybersecurity. I enjoy coding, participating in hackathons, and exploring new technologies. I’m always eager to learn, collaborate, and apply my skills to real-world challenges.",
   email: "salmanmd250705@gmail.com",
   phone: "+919848974790",
   address: "Hyderabad, Telangana, India",
